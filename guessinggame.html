@@ -1,28 +1,42 @@
-<script>
-/*The following is a guessing game where a user will be asked to guess a number between 1 and 10, which the computer will randomly generate beforehand*/
-
-  var play = prompt("Welcome to the game! You will need to correctly guess the randomly selected number between 1 and 10 in order to win. Enter in 'Yes' if you want to play or 'No' to exit.");
-
-  if (play.toLowerCase() == "yes"){
-  var number = Math.floor(Math.random() * 10); //Generates the random number
-  var answer = prompt("Great! Guess the number the computer has selected. Your options are from 1 to 10.");    
-
-    //Analyzing answer to see if it matches number
-    while(answer != number){
-        alert("Sorry, that wasn't correct. Try again!")
-        answer = prompt("Guess the number the computer has selected. Remember, your options are from 1 to 10.");
-    }
-    
-    //Do this if the player guesses correctly
-    if (answer == number) {
-        alert("OMG, you did it! Congratulations! Refresh the page to play again.");
-    }
-
-  //Handling the responses other than 'yes'
-  } else if (play.toLowerCase() == "no") {
-    alert("Maybe later, then! Take care.");
-  } else {
-    alert("Your entry doesn't seem to match a 'Yes' or a 'No'. Please refresh the page to reattempt a response.");
-  }
-
-</script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Guessing Game</title>
+    <link rel="stylesheet" type="text/css" href="guessinggame.css">
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div id="background"></div>
+    <header>
+      <h1>Guess that number!</h1>
+    </header>
+    <main>
+      <section>
+        <div class="instructions">
+          <h2>In each game the computer will randomly select a number between 1 and 10. To win, you need to correctly guess that number.</h2>
+        </div>
+      </section>  
+      <section>
+          <form id="guess" action="guessinggame.html">
+            <label>
+              Your guess: 
+              <input type="text" id="userGuess" type="number" min="1" max="10">
+              <input type="submit" value="SUBMIT" class="pure-button" id="submit">
+              
+              <p id="pastGuesses"></p>
+            </label>
+          </form>
+      </section>
+      <section>
+        <div class="instructions">
+          <p id="result"></p>
+        </div>
+      </section>
+    </main>
+    <footer>
+    </footer>
+  </body>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="guess.js"></script>
+</html>
