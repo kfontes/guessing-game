@@ -4,6 +4,7 @@ In this guessing game the computer will pick a random number between 1 and 10. T
 
 #Sources
 - http://www.google.com/fonts/
+- http://thepatternlibrary.com/#science
 - https://css-tricks.com/styling-texty-inputs-only/
 - http://oscarotero.com/jquery/
 - http://stackoverflow.com/questions/5404839/how-can-i-refresh-a-page-with-jquery
