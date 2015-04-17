@@ -1,17 +1,16 @@
 $(function(){
-  event.preventDefault();
   var compGuess = Math.floor((Math.random() * 10) + 1), userGuess, i = 0;
   console.log(compGuess);
   
   $("#guess").submit(function(){
+    event.preventDefault();
 
     userGuess = $("#userGuess").val();
 
-    if (userGuess == compGuess){
+    if (userGuess === compGuess){
       $("#result").html("Congratulations! '" + userGuess + "' was the right number. Click the button below to play again.");
       $("<button>PLAY AGAIN</button>").insertAfter("#result");
       $("button").addClass("pure-button").click(function(){
-        location.reload();
       });
 
     } else {
