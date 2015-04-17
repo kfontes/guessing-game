@@ -17,7 +17,7 @@ $(function(){
     } else {
       $("#result").html("Sorry, '" + userGuess + "' was not what the computer guessed. Keep trying!");
       $("#userGuess").val("");
-      if(i==0){
+      if(i===0){
         $('#pastGuesses').text("Previous guesses:").append(" " + userGuess);
         i++;
       } else {
