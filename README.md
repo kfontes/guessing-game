@@ -12,3 +12,4 @@ You can play the game here: http://kfontes.github.io/guessing-game.
 - http://oscarotero.com/jquery/
 - http://stackoverflow.com/questions/5404839/how-can-i-refresh-a-page-with-jquery
 - http://purecss.io/buttons/
+
