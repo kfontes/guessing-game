@@ -12,7 +12,7 @@ $(function(){
 
       $("#result").html("Congratulations! '" + userGuess + "' was the right number. Total number of tries = " + (i+1) + ". Click the button below to play again. See if you can beat your previous number of guesses!");
       $("<button>OTHER BROWSER GAMES</button>").addClass("pure-button").insertAfter("#result").click(function(){
-        window.location.replace("http://imgur.com/gallery/9fi4h");
+          var newWindow = window.open("http://imgur.com/gallery/9fi4h", "Top 8 list in IMGUR");
       });
       $("<button>PLAY AGAIN</button>").addClass("pure-button").insertAfter("#result").click(function(){
         location.reload();
