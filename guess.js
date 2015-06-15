@@ -6,8 +6,9 @@ $(function(){
     event.preventDefault();
 
     userGuess = $("#userGuess").val();
+    console.log(userGuess);
 
-    if (userGuess === compGuess){
+    if (userGuess == compGuess){
       $("#result").html("Congratulations! '" + userGuess + "' was the right number. Click the button below to play again.");
       $("<button>PLAY AGAIN</button>").insertAfter("#result");
       $("button").addClass("pure-button").click(function(){
